@@ -22,18 +22,19 @@
     grid-area: roll;
   }
   
-  #studentForm button {
-    grid-area: button;
+  .add {
+    grid-area: add;
   }
   
   #studentForm {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-areas:
       "name name"
       "age roll"
-      "button button";
+      "add add"
+      "reset reset";
   }
   
   #studentForm * {
@@ -84,4 +85,13 @@
   
   .students div * {
     margin: 5px;
+  }
+
+  .reset {
+    grid-area: reset;
+    outline: none;
+    background-color: #6495ed;
+    color: white;
+    border: 5px solid transparent;
+    cursor: pointer;
   }
